@@ -1,0 +1,100 @@
+<br>
+<form action="{% url 'req_save' %}" method="post">
+    {% csrf_token %}
+<table align="center" border="0" bgcolor=#90ee90">
+    <tr>
+        <th>
+<input type="text" required name="rname" value="{{ email }}" readonly>
+        </th>
+    </tr>
+    <tr>
+        <th>
+Request Type:<input type="checkbox" name="rtype" value="plumbing">Plumbing
+            <input type="checkbox"  name="rtype" value="electrical">Electrical
+            <input type="checkbox" name="rtype" value="painting">painting
+            <input type="checkbox"  name="rtype" value="deep cleaning">deep cleaning
+        </th>
+    </tr>
+    <tr>
+        <th>
+            Request Discription:<textarea rows="5" cols="50" name="dis" required>
+            write here..
+        </textarea>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            city:<textarea rows="3" cols="50" name="city" required>
+            write here..
+        </textarea>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            state:<select name="state" required>
+<option value="Andhra Pradesh">Andhra Pradesh</option>
+<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+<option value="Assam">Assam</option>
+<option value="Bihar">Bihar</option>
+<option value="Chandigarh">Chandigarh</option>
+<option value="Chhattisgarh">Chhattisgarh</option>
+<option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+<option value="Daman and Diu">Daman and Diu</option>
+<option value="Delhi">Delhi</option>
+<option value="Lakshadweep">Lakshadweep</option>
+<option value="Puducherry">Puducherry</option>
+<option value="Goa">Goa</option>
+<option value="Gujarat">Gujarat</option>
+<option value="Haryana">Haryana</option>
+<option value="Himachal Pradesh">Himachal Pradesh</option>
+<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+<option value="Jharkhand">Jharkhand</option>
+<option value="Karnataka">Karnataka</option>
+<option value="Kerala">Kerala</option>
+<option value="Madhya Pradesh">Madhya Pradesh</option>
+<option value="Maharashtra">Maharashtra</option>
+<option value="Manipur">Manipur</option>
+<option value="Meghalaya">Meghalaya</option>
+<option value="Mizoram">Mizoram</option>
+<option value="Nagaland">Nagaland</option>
+<option value="Odisha">Odisha</option>
+<option value="Punjab">Punjab</option>
+<option value="Rajasthan">Rajasthan</option>
+<option value="Sikkim">Sikkim</option>
+<option value="Tamil Nadu">Tamil Nadu</option>
+<option value="Telangana">Telangana</option>
+<option value="Tripura">Tripura</option>
+<option value="Uttar Pradesh">Uttar Pradesh</option>
+<option value="Uttarakhand">Uttarakhand</option>
+<option value="West Bengal">West Bengal</option>
+</select>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            Pincode:
+            <input type="number" name="pincode" required min="0">
+        </th>
+    </tr>
+<tr>
+    <th>
+        Alternate number:
+                  <input type="tel" name="num" placeholder="Enter Alternate Phone Number" pattern="[6789][0-9]{9}" title="Enter Exactly 10 digits and numbers must start with 6 or 7 or 8 or 9" required>
+
+    </th>
+</tr>
+    <tr>
+        <th>
+            <button type="submit">Submit</button>
+        </th>
+    </tr>
+</table>
+</form>
+{% if data%}
+    <center>
+    <h3>
+        {{ data }}
+    </h3>
+    </center>
+{% endif %}

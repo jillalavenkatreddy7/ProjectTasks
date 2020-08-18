@@ -1,0 +1,68 @@
+<br>
+<br>
+<table border="2" align="center">
+<tr>
+    <th>Request Id</th>
+    <th>
+        Requested User Name
+    </th>
+    <th>
+        Request Type
+    </th>
+       <th>
+        Request Discription
+    </th>
+       <th>
+        City
+    </th>
+       <th>
+       State
+    </th>
+       <th>
+        Pincode
+    </th>
+       <th>
+       Alternate Number
+    </th>
+    <th>
+        Status
+    </th>
+       <th>
+        Remarks
+    </th>
+</tr>
+    {% for x in data %}
+    <tr>
+        <th>
+            {{ x.idno }}
+        </th>
+    <th>
+        {{ x.requested_user_name }}
+    </th>
+    <th>
+        {{ x.request_type }}
+    </th>
+    <th>
+{{ x.request_discription }}
+    </th>
+    <th>
+        {{ x.city }}
+    </th>
+    <th>
+        {{ x.state }}
+    </th>
+    <th>
+        {{ x.pincode }}
+    </th>
+    <th>
+        {{ x.alternate_ph_number }}
+    </th>
+        <th>
+        {{ x.status }}
+    </th>
+        <th>
+        {{ x.remarks }}
+    </th>
+    </tr>
+    {% endfor %}
+</table>

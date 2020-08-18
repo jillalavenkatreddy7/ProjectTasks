@@ -1,0 +1,5 @@
+*provider_for_project2 provides services to project2..
+*means here project2 is consuming the services and provider_for_project2 project provide the services..
+*run the provider project in localhost..
+*run the consumer project in different host..
+*ensure the internet connection for the both tasks...
